@@ -1,5 +1,5 @@
 import { useAuth } from "../auth/AuthContext";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 export default function Dashboard() {
@@ -21,9 +21,8 @@ export default function Dashboard() {
     }
   };
 
-  // Функція для обробки повернення назад
   const handleGoBack = () => {
-    navigate(-1); // navigate(-1) повертає на попередню сторінку в історії
+    navigate(-1); 
   };
 
   if (!currentUser) {
